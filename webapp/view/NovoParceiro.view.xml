@@ -1,0 +1,69 @@
+<mvc:View controllerName="fiori.parceiros.controller.NovoParceiro"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+   	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+    <Page id="novoParceiro">
+        <!-- agregação content (default, portanto omitida) -->
+        <f:SimpleForm id="SimpleFormDisplay354"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="{i18n>novo}"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+
+				<Label text="Categoria" />
+				<Select items="{novoParceiro>/categorias}" change="aoEscolherCategoria">
+					<core:Item key="{novoParceiro>PartnerType}" text="{novoParceiro>Texto}" />					
+				</Select>
+
+
+				<Label text="Nome 1" />
+				<Input value="{novoParceiro>/PartnerName1}" />
+                <Label text="Nome 2" />
+				<Input value="{novoParceiro>/PartnerName2}"  />
+				<Label text="Termo Pesquisa 1" />
+				<Input value="{novoParceiro>/SearchTerm1}"  />
+				<Label text="Termo Pesquisa 2" />
+				<Input value="{novoParceiro>/SearchTerm2}"  />
+				<Label text="Rua" />
+				<Input value="{novoParceiro>/Street}"  />
+				<Label text="Numero" />
+				<Input value="{novoParceiro>/HouseNumber}"  />
+				<Label text="Bairro" />
+				<Input value="{novoParceiro>/District}"  />
+				<Label text="Cidade" />
+				<Input value="{novoParceiro>/City}"  />
+				<Label text="Estado" />
+				<Input value="{novoParceiro>/Region}"  />
+				<Label text="CEP" />
+				<Input value="{novoParceiro>/ZipCode}"  />
+				<Label text="País" />
+				<Input value="{novoParceiro>/Country}"  />
+			</f:content>
+		</f:SimpleForm>
+        
+        <!-- agregação footer -->
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                	<Button id="botaoSalvar" text="{i18n>salvar}" type="Emphasized" press="aoSalvar"/>
+
+	                <Button id="botaoCancelar" text="{i18n>cancelar}" type="Reject" press="aoCancelar"/>
+            </OverflowToolbar>            
+        </footer>
+
+    </Page>
+</mvc:View>

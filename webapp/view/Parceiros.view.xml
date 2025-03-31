@@ -1,0 +1,34 @@
+<mvc:View controllerName="fiori.parceiros.controller.Parceiros"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <List id="listaParceiros" 
+                  items="{/Parceiros}"
+                  mode="SingleSelectMaster"
+                  itemPress="aoSelecionarBP" >
+
+                  <headerToolbar>
+                    <OverflowToolbar >
+                        <SearchField width="30%" liveChange="aoPesquisarParceiro" />
+                        <SearchField width="30%" liveChange="aoPesquisarParceiroPorId" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://sort" press="aoOrdenar" />
+                    </OverflowToolbar>
+                  </headerToolbar>
+
+                  <infoToolbar>
+                    <OverflowToolbar >
+                        <ToolbarSpacer />
+                        <Button text="Criar Parceiro" type="Emphasized" press="aoCriarParceiro" />
+                    </OverflowToolbar>
+                  </infoToolbar>
+
+
+                <StandardListItem title="{PartnerName1}" description="{PartnerId}" 
+                                  type="Active"                                
+                />
+            </List>
+        </content> 
+    </Page>
+</mvc:View>
