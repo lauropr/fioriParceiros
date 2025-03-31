@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Application Details
 |               |
 | ------------- |
@@ -40,3 +41,7 @@ A Fiori application.
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
 
+=======
+# fioriParceiros
+Academia Fiori: Gestão de Parceiros
+>>>>>>> 83da6614f6d1db36aba7894bfc5ec0eb0fa5cf80
