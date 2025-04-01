@@ -94,6 +94,26 @@ sap.ui.define([
                 //navega para a rota de criação
                 oRoteador.navTo("RouteNovoParceiro");
 
+            },
+
+            aoSelecionarBP: function(oEvent){
+                
+                //resgata o item clicado
+                let oItem = oEvent.getParameters().listItem;
+
+                //usa o contexto de binding para acessar o item no modelo OData
+                let oItemDoModelo = oItem.getBindingContext().getObject();
+
+                //guarda ID do parceiro para usar na navegação
+                let sIdDoParceiro = oItemDoModelo.PartnerId;
+
+                //realiza a navegação
+                let oRoteador = this.getOwnerComponent().getRouter();
+
+                //navega para a rota de display
+                oRoteador.navTo("RouteDetalheParceiro", {
+                    PartnerId: sIdDoParceiro
+                });
             }
 
  

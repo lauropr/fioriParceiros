@@ -8,7 +8,7 @@
         <f:SimpleForm id="SimpleFormDisplay354"
 			editable="false"
 			layout="ResponsiveGridLayout"
-			title="{i18n>novo}"
+			title="{i18n>Novo}"
 			labelSpanXL="3"
 			labelSpanL="3"
 			labelSpanM="3"
@@ -54,14 +54,13 @@
 				<Input value="{novoParceiro>/Country}"  />
 			</f:content>
 		</f:SimpleForm>
-        
+
         <!-- agregação footer -->
         <footer>
             <OverflowToolbar>
                 <ToolbarSpacer />
-                	<Button id="botaoSalvar" text="{i18n>salvar}" type="Emphasized" press="aoSalvar"/>
-
-	                <Button id="botaoCancelar" text="{i18n>cancelar}" type="Reject" press="aoCancelar"/>
+                	<Button id="botaoSalvar" text="{i18n>Salvar}" type="Emphasized" press="aoSalvar"/>
+	                <Button id="botaoCancelar" text="{i18n>Cancelar}" type="Reject" press="aoCancelar"/>
             </OverflowToolbar>            
         </footer>
 

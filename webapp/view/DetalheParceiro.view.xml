@@ -1,0 +1,64 @@
+<mvc:View xmlns:f="sap.f" controllerName="fiori.parceiros.controller.DetalheParceiro"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form">
+    <Page id="detalheParceiro" >
+
+			<!-- agregação content (default, portanto omitida) -->
+			<form:SimpleForm id="formParceiro"
+				editable="false"
+				layout="ResponsiveGridLayout"
+				title="{i18n>Info}"
+				labelSpanXL="3"
+				labelSpanL="3"
+				labelSpanM="3"
+				labelSpanS="12"
+				adjustLabelSpan="false"
+				emptySpanXL="4"
+				emptySpanL="4"
+				emptySpanM="4"
+				emptySpanS="0"
+				columnsXL="1"
+				columnsL="1"
+				columnsM="1"
+				singleContainerFullSize="false" >
+				<form:content>
+					<Label text="Nome 1" />
+					<Input value="{PartnerName1}" editable="{modo>/editavel}" />
+					<Label text="Nome 2" />
+					<Input value="{PartnerName2}" editable="{modo>/editavel}" />
+					<Label text="Termo Pesquisa 1" />
+					<Input value="{SearchTerm1}"  editable="{modo>/editavel}" />
+					<Label text="Termo Pesquisa 2" />
+					<Input value="{SearchTerm2}" editable="{modo>/editavel}" />
+					<Label text="Rua" />
+					<Input value="{Street}" editable="{modo>/editavel}" />
+					<Label text="Numero" />
+					<Input value="{HouseNumber}" editable="{modo>/editavel}" />
+					<Label text="Bairro" />
+					<Input value="{District}" editable="{modo>/editavel}" />
+					<Label text="Cidade" />
+					<Input value="{City}" editable="{modo>/editavel}" />
+					<Label text="Estado" />
+					<Input value="{Region}" editable="{modo>/editavel}" />
+					<Label text="CEP" />
+					<Input value="{ZipCode}" editable="{modo>/editavel}" />
+					<Label text="País" />
+					<Input value="{Country}" editable="{modo>/editavel}" />
+				</form:content>
+			</form:SimpleForm>
+        
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button id="botaoEditar" text="{i18n>Editar}" type="Emphasized" press="aoEditar" />
+                <Button id="botaoSalvarMod" text="{i18n>Salvar}" type="Accept" press="aoSalvar" visible="false" />
+                <Button id="botaoCancelarMod" text="{i18n>Cancelar}" type="Reject" press="aoCancelar" visible="false" />
+
+            </OverflowToolbar>
+
+        </footer>
+
+    </Page>
+</mvc:View>
